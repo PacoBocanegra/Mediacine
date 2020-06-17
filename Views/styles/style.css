@@ -1,0 +1,437 @@
+﻿/* Fuentes de letra*/
+
+/*Fuente para el texto*/
+  @font-face {
+      font-family: 'Montserrat';
+      src: url('../fonts/Montserrat-Regular.ttf'),
+  }
+
+  @font-face {
+    font-family: 'PontanSans';
+    src: url('../fonts/PontanoSans-Regular.ttf'),
+  }
+
+  @font-face {
+      font-family: 'icomoon';
+      src:  url('../fonts/icomoon.eot?6jn0xm');
+      src:  url('../fonts/icomoon.eot?6jn0xm#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?6jn0xm') format('truetype'),
+        url('../fonts/icomoon.woff?6jn0xm') format('woff'),
+        url('../fonts/icomoon.svg?6jn0xm#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-airplay:before {
+    content: "\e901";
+  }
+  .icon-ondemand_video:before {
+    content: "\e902";
+  }
+  .icon-star:before {
+    content: "\e906";
+  }
+  .icon-star_outline:before {
+    content: "\e907";
+  }
+  .icon-star1:before {
+    content: "\e908";
+  }
+  .icon-film:before {
+    content: "\e903";
+  }
+  .icon-document-star:before {
+    content: "\e904";
+  }
+  .icon-star2:before {
+    content: "\e909";
+  }
+  .icon-pencil:before {
+    content: "\e905";
+  }
+  .icon-video-camera:before {
+    content: "\e914";
+  }
+  .icon-ticket:before {
+    content: "\e939";
+  }
+  .icon-phone:before {
+    content: "\e942";
+  }
+  .icon-location:before {
+    content: "\e947";
+  }
+  .icon-clock:before {
+    content: "\e94e";
+  }
+  .icon-user:before {
+    content: "\e971";
+  }
+  .icon-bin:before {
+    content: "\e9ac";
+  }
+  .icon-eye:before {
+    content: "\e9ce";
+  }
+  .icon-eye-blocked:before {
+    content: "\e9d1";
+  }
+  .icon-plus:before {
+    content: "\ea0a";
+  }
+  .icon-arrow-left:before {
+    content: "\ea38";
+  }
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-eur:before {
+    content: "\f153";
+  }
+  .icon-euro:before {
+    content: "\f153";
+  }
+  .icon-envelope:before {
+    content: "\e900";
+  }
+/* Estilos generales */
+
+.negrita {
+  font-weight: bold;
+}
+
+.azul {
+  color: #031F40;
+}
+
+.texto-normal {
+  font-family: Montserrat !important;
+}
+
+.boton1 {
+  background-color: #031F40;
+  color: #D7C61E;
+}
+
+.boton1:hover {
+  opacity: 0.7;
+}
+
+.boton2 {
+  background-color: #D7C61E;
+  color: #031F40;
+}
+
+.boton2:hover {
+  opacity: 0.7;
+}
+
+.contenido hr {
+  background-color: #031F40;
+}
+
+/* Body de la página */
+.cuerpo {
+    font-family: Montserrat;
+    background-color: #F1F1F1;
+}
+
+/* Contenido del cuerpo */
+.container {
+  background-color:rgba(255, 238, 0, 0.137);
+}
+
+/* Cabecera */
+.header {
+  background-color: #031F40;
+  color: white;
+}
+
+.header img {
+  height: 100px;
+}
+
+.header div a {
+  color: white;
+}
+
+.header div a:hover {
+  color: #D7C61E;
+  text-decoration: none;
+}
+
+.contenido .titulo {
+  font-family: PontanoSans;
+  color: #031F40;
+  font-weight: bold;
+}
+
+.menu-usuario .dropdown-menu {
+  background-color: #031F40 !important;
+}
+.menu-usuario .dropdown-item:hover {
+  background-color: #D7C61E !important;
+  color: #031F40;
+}
+/* Pie de página */
+.pie {
+  background-color: #031F40;
+  color: white;
+}
+
+.pie hr{
+  background-color: white;
+}
+
+.enlaces-pie {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+.enlaces-pie a {
+  color: white;
+}
+
+.enlaces-pie a:hover {
+  text-decoration: none;
+  color: #D7C61E;
+}
+
+/* Página de cartelera */
+
+.modal-pelicula img{
+  border: 15px solid #031F40;
+  height: 450px;
+  width: 400px;
+}
+
+.ventana-modal {
+  background-color: #F1F1F1;
+  border: 5px solid #031F40;
+}
+.modal-pelicula img:hover{
+  opacity: 0.7;
+}
+
+.titulo-modal {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.icono-valoracion img {
+  height: 50px;
+}
+
+.puntuacion-valoracion {
+  color: #D7C61E;
+  font-weight: bold;
+  position: relative;
+  right: 44px;
+  top: 2px;
+}
+
+#formularioValorar {
+  position: relative;
+  right: 12px;
+}
+
+#formularioValorar label {
+  font-size: 30px;
+}
+
+#formularioValorar input[type="radio"] {
+  display: none;
+}
+
+#formularioValorar label {
+  color: #031F40;
+}
+
+#formularioValorar .valoracion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+#formularioValorar label:hover,
+#formularioValorar label:hover ~ label {
+  color: #D7C61E;
+}
+
+#formularioValorar input[type="radio"]:checked ~ label {
+  color: #D7C61E;
+}
+
+/* Pagina tarifa */
+
+
+.titulo-card {
+  color: #031F40;
+  border: 1px solid #031F40 !important;
+}
+
+.cuerpo-card {
+  border: 1px solid #031F40 !important;
+}
+
+/* Página contacta */
+.map {
+  border: 10px solid #031F40;
+}
+
+.icono-redes {
+  font-size: 80px;
+  color: #031F40;
+}
+
+.icono-redes:hover {
+  color: #D7C61E;
+}
+
+.enlaces-redes a:hover {
+  text-decoration: none;
+
+}
+
+
+/* Página login - registro */
+.login-registro {
+  background-color: #031F40;
+  color: white;
+}
+
+.mensaje-error {
+  font-size:16px !important;
+  color:#cc0000 !important;
+}
+
+/* Página perfil usuario */
+
+.fechas-entradas {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+.info-num-entrada {
+  font-size: 30px;
+  font-weight: bold;
+  color: #031F40;
+}
+
+/* Página comprar entrada */
+
+.total {
+  font-size: 30px;
+}
+
+/*Páginas panel admin*/
+
+.boton-panel-admin {
+  height: 200px;
+  background-color: #031F40;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.boton-panel-admin:hover {
+  opacity: 0.7;
+}
+
+.icono-panel {
+  font-size: 80px;
+}
+
+/*Paneles peliculas, sesiones, tarifas, usuarios*/
+
+
+.icono-añadir {
+  font-size: 80px;
+  color: #031F40;
+}
+
+.icono-añadir:hover {
+  opacity: 0.7;
+}
+
+.boton-volver {
+  background-color: #031F40;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.boton-volver:hover {
+  opacity: 0.7;
+}
+
+.icono-atras {
+  font-size: 30px;
+}
+
+.fila-panel {
+  background-color: #031F40;
+}
+
+.bloque-panel {
+  background-color: white;
+  display: table;
+  height: 40px;
+}
+
+.bloque-panel p {
+  color: #031F40;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.bloque-panel button:hover {
+  opacity: 0.7;
+}
+
+.boton-panel {
+  background-color: white !important;
+}
+
+.usuario-admin {
+  background-color: #D7C61E;
+  color: #031F40;
+}
+
+/*Formulario*/
+.tabla-genero td {
+  border-top: none !important;
+  border-left: none !important;
+}
+
+.tabla-usuario td {
+  border-top: none !important;
+  border-left: none !important;
+}
