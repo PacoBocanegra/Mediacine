@@ -83,22 +83,16 @@
 		    
 		    <!-- Contenido -->
 		    <div class="contenido p-3">
-                <h1 class="text-center mb-3 titulo"> Tarifas </h1>
+                <h1 class="text-center titulo mb-5"> Tarifas </h1>
 			    <!-- Tarifas -->
 			    <div class="row justify-content-center">
 					<?php
                         foreach ($data['tarifas'] as $tarifa) {
                     ?>
-			    	<div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card text-center carta">
-                            <div class="card-header titulo-card">
-                                <h3><?php echo $tarifa->getType();?></h3>
-                            </div>
-			    			<div class="card-body cuerpo-card">
-			    				<h3 class="card-title negrita azul"> Precio </h3>
-			    				<div class="card-subtitle"> <?php echo $tarifa->getPrice();?>€ </div>
-			    			</div>
-			    		</div>
+			    	<div class="col-lg-6 ticketTarifa mb-3">
+						<img src="../Views/images/ticketTarifa.png" class="img-fluid">
+						<div class="tituloTarifa"><?php echo $tarifa->getType();?></div>
+						<div class="precioTarifa"><?php echo $tarifa->getPrice();?>€</div>
 					</div>
 					<?php
                         }

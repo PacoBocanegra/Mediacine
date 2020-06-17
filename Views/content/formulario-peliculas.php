@@ -95,7 +95,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Título</label>
-                                        <input type="text" name="titulo" class="form-control form-control-sm" value="<?php if(isset($pelicula)){ echo $pelicula->getTitle();} else { if(isset($_POST['titulo'])){ echo $_POST['titulo']; } else { echo ''; } } ?>" required>
+                                        <input type="text" name="titulo" class="form-control form-control-sm" value="<?php if(isset($_POST['titulo'])){ echo $_POST['titulo']; } else { if(isset($pelicula)){ echo $pelicula->getTitle();} else { echo ''; } } ?>" required>
                                         <div class="mensaje-error"><?php echo isset($errorTitle) ? utf8_decode($errorTitle) : '' ; ?></div>
                                     </div>
                                 </div>

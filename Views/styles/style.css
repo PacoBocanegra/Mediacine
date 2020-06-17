@@ -296,6 +296,33 @@
   border: 1px solid #031F40 !important;
 }
 
+.ticketTarifa{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.tituloTarifa{
+  width: 250px;
+  color: #031F40;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.precioTarifa{
+  font-size: 35px;
+  color: #031F40;
+  font-weight: bold;
+  position: absolute;
+  top: 63%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  
+}
+
 /* Página contacta */
 .map {
   border: 10px solid #031F40;

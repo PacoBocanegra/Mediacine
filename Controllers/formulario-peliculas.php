@@ -24,11 +24,11 @@
         $pelicula = Pelicula::getPelicula($_SESSION['idPelicula']);
         $generos = explode("/", $pelicula->getGenre());
         if(isset($_POST['guardar'])) {
-            if (Pelicula::comprobarID($_POST['codigo']) != $pelicula->getId()) {
-                $errorID = "Este ID ya existe. Utiliza otro.";
-                if(isset($_POST['genero'])) {
-                    $generos = explode("/", $_POST['genero']);
-                }  
+            if ($_POST['titulo'] != $pelicula->getTitle()) {
+                if (Pelicula::comprobarTitle($_POST['titulo'])) {
+                    $errorTitle = "Esta película ya existe. Utiliza otro título.";
+                    $generos = $_POST['genero'];
+                } 
             } else {
                 if($_FILES['imagen']['name']) {
                     $imagen = $_FILES['imagen']['name'];
