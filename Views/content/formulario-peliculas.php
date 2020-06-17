@@ -254,7 +254,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
+                            <?php
+                                if(isset($pelicula)) {
+                            ?>
+                                <div class="row justify-content-center">
+                                    <div class="col">
+                                        <img src="<?php echo $pelicula->getImage(); ?>" class="img-fluid imgFormPelicula">
+                                    </div>
+                                </div>
+                            <?php
+                                }
+                            ?>
+                            <div class="row justify-content-center mt-3">
                                 <div class="col">
                                     <button type="submit" class="btn boton2" name="guardar"> Guardar </button>
                                 </div>
