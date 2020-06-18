@@ -67,9 +67,6 @@ class Sesion {
   public function update($id) {
     $conexion = CineDB::connectDB();
     $actualiza = "UPDATE SESION SET Fecha = \"".$this->fecha."\", Hora = \"".$this->hora."\", ButacasDisp = \"".$this->butacasDips."\", IdSala = \"".$this->idSala."\", IdTarifa = $this->idTarifa, IdPelicula = $this->idPelicula WHERE IdSesion = $id";
-    var_dump("<br>");
-    var_dump("<br>");
-    var_dump($actualiza);
     $conexion->exec($actualiza);
   }
 
@@ -79,6 +76,7 @@ class Sesion {
     $conexion->exec($borrado);
   }
 
+  // Comprueba si la sala está ocupada en una hora y fecha determinada
   public static function comprobarSalaSesion($sala, $fecha, $hora) {
     $conexion = CineDB::connectDB();
     $sesionSala = "SELECT IdSesion FROM SESION WHERE IdSala = '$sala' AND Fecha = '$fecha' AND Hora = '$hora'";
@@ -90,6 +88,7 @@ class Sesion {
     return false;
   }
 
+  // Devuelve una sesión por su ID
   public static function getSesion($id) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdSesion, Fecha, Hora, ButacasDisp, IdSala, IdTarifa, IdPelicula FROM SESION WHERE IdSesion = $id";
@@ -100,6 +99,7 @@ class Sesion {
     return $sesion;    
   }
 
+  // Devuelve todas las sesiones
   public static function getSesiones() {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdSesion, Fecha, Hora, ButacasDisp, IdSala, IdTarifa, IdPelicula FROM SESION ORDER BY IdSesion DESC";
@@ -113,7 +113,7 @@ class Sesion {
     return $sesiones;    
   }
 
-  //Devuelve todas las sesiones de una fecha en concreto
+  // Devuelve todas las sesiones de una fecha en concreto
   public static function getSesionesFecha($fecha) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdSesion, Fecha, Hora, ButacasDisp, IdSala, IdTarifa, IdPelicula FROM SESION WHERE Fecha = '$fecha' ORDER BY IdPelicula DESC";
@@ -127,7 +127,7 @@ class Sesion {
     return $sesiones;    
   }
 
-  //Devuelve las sesiones de una película en concreto de días posteriores a hoy.
+  // Devuelve las sesiones de una película en concreto de días posteriores a hoy.
   public static function getSesionesFechaPelicula($idPelicula) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT DISTINCT Fecha FROM SESION WHERE IdPelicula = $idPelicula";
@@ -144,7 +144,7 @@ class Sesion {
     return $fechas;    
   }
 
-  //Devuelve las horas de una fecha de sesión
+  // Devuelve las horas de una fecha de sesión
   public static function getHorasSesiones($idPelicula, $fecha) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT DISTINCT Hora FROM SESION WHERE IdPelicula = $idPelicula AND Fecha = '$fecha'";
@@ -156,7 +156,7 @@ class Sesion {
     return $horas; 
   }
 
-  //Devuelve la sesión en concreto de la película, fecha y hora
+  // Devuelve la sesión en concreto de la película, fecha y hora
   public static function getSesionPelicula($idPelicula, $fecha, $hora) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdSesion, Fecha, Hora, ButacasDisp, IdSala, IdTarifa, IdPelicula FROM SESION WHERE IdPelicula = $idPelicula AND Fecha = '$fecha' AND Hora = '$hora'";
@@ -167,6 +167,7 @@ class Sesion {
     return $sesion;    
   }
 
+  // Procesa los datos del formulario para insert
   public function getDatosFormularioSesion($fecha, $hora, $butacasDips, $idSala, $idTarifa, $idPelicula) {
     $sesion = new Sesion($fecha, $hora, $butacasDips, $idSala, $idTarifa, $idPelicula);
     return $sesion;

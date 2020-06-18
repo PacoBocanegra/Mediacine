@@ -105,6 +105,7 @@ class Pelicula {
     return false;
   }
 
+  // Devuelve una película por su ID
   public static function getPelicula($id) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdPelicula, Año, Titulo, Pais, Genero, Duracion, FechaEstreno, Valoracion, Sinopsis, Enlace FROM PELICULA WHERE IdPelicula = $id";
@@ -115,6 +116,7 @@ class Pelicula {
     return $pelicula;    
   }
 
+  // Devuelve todas las películas
   public static function getPeliculas() {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdPelicula, Año, Titulo, Pais, Genero, Duracion, FechaEstreno, Valoracion, Sinopsis, Enlace FROM PELICULA ORDER BY IdPelicula DESC";
@@ -128,6 +130,7 @@ class Pelicula {
     return $peliculas;    
   }
 
+  // Procesa los datos del formulario para hacer el insert
   public function getDatosFormularioPelicula($titulo, $generos, $duracion, $fechaEstreno, $año, $pais, $sinopsis, $imagen, $valoracion ) {
     $genero = "";
     for ($i = 0; $i <= sizeof($generos); $i++) {

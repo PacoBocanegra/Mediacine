@@ -155,6 +155,7 @@ class Usuario {
     return $usuarios;    
   }
 
+  // Procesa los datos del formulario para insert
   public function getDatosFormularioUsuario($dni, $nombre, $apellidos, $email, $password, $admin="") {
     $usuario = new Usuario($dni, $nombre, $apellidos, $email, $password);
     if ($admin != ""){

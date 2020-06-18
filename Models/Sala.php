@@ -43,7 +43,7 @@ class Sala {
     $conexion->exec($borrado);
   }
 
-  // Comprueba que no se repita el IdPelicula en el formulario pelicula
+  // Comprueba que no se repita el IdSala que corresponde al número de sala en el formulario sala
   public static function comprobarID($id) {
     $conexion = CineDB::connectDB();
     $sql = "SELECT IdSala FROM SALA";
@@ -56,6 +56,7 @@ class Sala {
     return false;
   }
 
+  // Devuelve una sala por su ID
   public static function getSala($id) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdSala, Butacas, TipoSala FROM SALA";
@@ -65,6 +66,7 @@ class Sala {
     return $sala;    
   }
 
+  // Devuelve todas las salas
   public static function getSalas() {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdSala, Butacas, TipoSala FROM SALA";

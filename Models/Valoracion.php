@@ -38,6 +38,7 @@ class Valoracion {
     $conexion->exec($borrado);
   }
 
+  // Comprueba si el usuario ha valorado la película
   public static function getUsuarioValorado($dni, $idPelicula) {
     $conexion = CineDB::connectDB();
     $sql = "SELECT Puntuacion FROM VALORACION WHERE DNI = '$dni' AND IdPelicula = '$idPelicula'";
@@ -50,6 +51,7 @@ class Valoracion {
     return false;
   }
 
+  // Devuelve todas las valoraciones
   public static function getValoraciones() {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT DNI, IdPelicula, Puntuacion FROM VALORACION";

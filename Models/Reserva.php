@@ -67,6 +67,7 @@ class Reserva {
     return false;
   }
 
+  // Devuelve una reserva de un usuario y una sesión determinada
   public static function getReserva($dni, $idSesion) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT DNI, IdSesion, numButacas FROM RESERVA WHERE DNI = '$dni' AND IdSesion = '$idSesion'";
@@ -76,6 +77,7 @@ class Reserva {
     return $reserva;    
   }
 
+  // Devuelve todas las reservas
   public static function getReservas() {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT DNI, IdSesion, numButacas FROM RESERVA";
@@ -87,6 +89,7 @@ class Reserva {
     return $reservas;    
   }
 
+  // Devuelve las reservas de un usuario
   public static function getReservasUsuario($dni) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT DNI, IdSesion, numButacas FROM RESERVA WHERE DNI = '$dni'";

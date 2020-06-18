@@ -46,6 +46,7 @@ class Tarifa {
     $conexion->exec($actualiza);
   }
 
+  // Devuelve una tarifa por su ID
   public static function getTarifa($id) {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdTarifa, TipoTarifa, Precio FROM TARIFA WHERE IdTarifa = $id";
@@ -56,6 +57,7 @@ class Tarifa {
     return $tarifa;    
   }
 
+  // Devuelve todas las tarifas
   public static function getTarifas() {
     $conexion = CineDB::connectDB();
     $seleccion = "SELECT IdTarifa, TipoTarifa, Precio FROM TARIFA";
@@ -69,6 +71,7 @@ class Tarifa {
     return $tarifas;    
   }
 
+  // Procesa los datos del formulario para insert
   public function getDatosFormularioTarifa($tipoTarifa, $precio) {
     $tarifa = new Tarifa($tipoTarifa, $precio);
     return $tarifa;
