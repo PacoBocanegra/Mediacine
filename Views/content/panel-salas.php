@@ -101,7 +101,6 @@
                 </div>
                 <?php
                         foreach ($salas as $sala) {
-                            var_dump($sala->getId());
                 ?>
                 <div class="row justify-content-center mb-3 fila-panel">
                     <div class="col-2 m-2 bloque-panel">
