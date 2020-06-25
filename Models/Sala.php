@@ -59,7 +59,7 @@ class Sala {
   // Devuelve una sala por su ID
   public static function getSala($id) {
     $conexion = CineDB::connectDB();
-    $seleccion = "SELECT IdSala, Butacas, TipoSala FROM SALA";
+    $seleccion = "SELECT IdSala, Butacas, TipoSala FROM SALA WHERE IdSala = '$id'";
     $consulta = $conexion->query($seleccion);
     $registro = $consulta->fetchObject();
     $sala = new Sala($registro->IdSala, $registro->Butacas, $registro->TipoSala);
